@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigate LaSalle | Sidebar</title>
+    <link rel="stylesheet" href="/../style/sidebar.css">
+    <!--FONT-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Grenze:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Gupter:wght@400;500;700&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <!-- Include Font Awesome in the head -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <div class="side-nav" id="side-nav">
+        <i class="fas fa-chevron-left" id="collapse-icon" onclick="toggleNav()"></i>
+
+        <div class="nav-logo">
+            <img src="/../images/logo-dlsud.png" class="logo">
+            <h2>De La Salle University Dasmarinas</h2>
+            <p>Virtual Tour of DLSU-D Campus</p>
+        </div>
+
+        <div class="navigation">
+            <div class="nav-item">
+                <p>Building 1</p>
+            </div>
+            <div class="nav-item">
+                <p>Building 2</p>
+            </div>
+            <div class="nav-item">
+                <p>Building 3</p>
+            </div>
+            <div class="nav-item">
+                <p>Building 4</p>
+            </div>
+            <div class="nav-item">
+                <p>Building 5</p>
+            </div>
+            <div class="nav-item">
+                <p>Building 6</p>
+            </div>
+            <div class="nav-item">
+                <p>Building 7</p>
+            </div>
+            <div class="nav-item">
+                <p>Building 8</p>
+            </div>
+        </div>
+
+        <div class="widget" id="go-back" onclick="window.location.href='home.html'">
+            <img class="icon" src="/../icons/icons-dashboard-alt.png">
+            <p>Go back to Dashboard</p>
+        </div>
+    </div>
+
+    <script>
+        function toggleNav() {
+            const sideNav = document.getElementById("side-nav");
+            const collapseIcon = document.getElementById("collapse-icon");
+
+            sideNav.classList.toggle("collapsed");
+
+            // Toggle icon between chevron and plus
+            if (sideNav.classList.contains("collapsed")) {
+                collapseIcon.classList.remove("fa-chevron-left");
+                collapseIcon.classList.add("fa-bars");
+            } else {
+                collapseIcon.classList.remove("fa-bars");
+                collapseIcon.classList.add("fa-chevron-left");
+            }
+        }
+    </script>
+</body>
+
+</html>

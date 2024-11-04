@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(rgba(0, 138, 61, 0.95), rgba(0, 138, 61, 0.95)), url('../images/background-2.jpg') no-repeat center center/cover;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    flex-direction: column;
+}
+
+.back-btn {
+    position: fixed;
+    top: 5vh;
+    left: 10vh;
+    font-size: 4vh;
+    cursor: pointer;
+    color: #fff;
+    border: 0.5vh solid #fff;
+    border-radius: 50%;
+    display: flex;
+    padding: 2vh 1.1vw;
+}
+
+.logo {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    max-height: 8vh;
+    margin: 1vh 1vw;
+}
+
+.header {
+    font-family: 'Roboto', serif;
+}
+
+.header h2 {
+    margin-top: 7vh;
+    font-size: 10vh;
+}
+
+.header p {
+    font-size: 1.5vh;
+    font-style: italic;
+    margin-top: 2vh;
+}
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5vh;
+    width: 80vw;
+    height: 60vh;
+    gap: 1vh;
+    overflow-y: auto;
+}
+
+.faq-item {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 2vh;
+    color: #008a3d;
+    align-items: center;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    width: 100%;
+    padding: 0 5vh;
+}
+
+.faq-question i {
+    font-size: 5vh;
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+.icon {
+    font-family: "Roboto", serif;
+    font-weight: 100;
+    font-size: 7vh;
+    display: none;
+    cursor: pointer;
+}
+
+.faq-text {
+    font-size: 2.5vh;
+    font-weight: bold;
+    font-family: 'EB Garamond', sans-serif;
+}
+
+.faq-answer {
+    width: 100%;
+    border-top: 2px solid rgba(53, 53, 53, 0.75);
+    padding: 5vh 5vh 5vh;
+    font-size: 2vh;
+    text-align: justify;
+    display: none;
+}
+
+/* Custom Scroll Bar */
+::-webkit-scrollbar {
+    width: 0;
+}

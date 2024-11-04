@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigate LaSalle | Home</title>
+    <link rel="stylesheet" href="/../style/home.css">
+    <!--FONT-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <!-- Include Font Awesome in the head -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <img src="/../images/logo-dlsud2.png" class="logo">
+
+    <div class="container">
+        <div class="search-bar">
+            <span class="search-text">Searching for something...</span>
+            <i class="search-icon fas fa-search"></i>
+        </div>
+        <div class="dashboard">
+            <div class="featured-news">
+                <div class="news-container">
+                    <button class="prev-btn" id="prev-btn"><i class="fas fa-chevron-left"></i></button>
+                    <div class="news-caurosel">
+                        <div class="news-element">
+                            <img src="/../images/news1.jpg" class="news-picture">
+                            <p>
+                                <i class="fas fa-calendar"></i> MARCH 14, 2024
+                                <i class="tag fas fa-tag tag"></i> NEWS
+                            </p>
+                            <h2>DLSU-D joins Study Abroad Fair in Taiwan</h2>
+                            <p>DLSU-D’s Linkages and Scholarship Office recently participated in the Partner Day and
+                                Study
+                                Abroad Fair organized by Providence University in Taiwan.</p>
+                            <button class="read-more" onclick="window.location.href='read-more.html'">Read More</button>
+                        </div>
+                        <div class="news-element">
+                            <img src="/../images/news2.jpg" class="news-picture">
+                            <p>
+                                <i class="fas fa-calendar"></i> HUNE 12, 2024
+                                <i class="tag fas fa-tag tag"></i> ANNOUNCEMENT
+                            </p>
+                            <h2>Professorial Lecture on Linguistics</h2>
+                            <p>DLSU-D honored the birth anniversary of former University President Br. Andrew Gonzalez
+                                FSC through a professorial chair lecture in linguistics.</p>
+                            <button class="read-more" onclick="window.location.href='read-more.html'">Read More</button>
+                        </div>
+                        <div class="news-element">
+                            <img src="/../images/news3.jpg" class="news-picture">
+                            <p>
+                                <i class="fas fa-calendar"></i> FEBRUARY 19, 2024
+                                <i class="tag fas fa-tag tag"></i> EVENT
+                            </p>
+                            <h2>Museo holds cosplay event</h2>
+                            <p>In a vibrant blend of history, culture, and creativity, Museo de La Salle came alive on
+                                October 18, 2023, as it played host to an enchanting event that captivated the hearts
+                                and minds of students.</p>
+                            <button class="read-more" onclick="window.location.href='read-more.html'">Read More</button>
+                        </div>
+                        <div class="indicators">
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                    </div>
+                    <button class="next-btn" id="next-btn"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                <button class="view-news" id="viewNews" onclick="window.location.href='news-and-announcement.html'">View
+                    More News</button>
+            </div>
+
+            <div class="widgets">
+                <div class="time-date">
+                    <p class="time" id="time">13:00</p>
+                    <p class="date" id="date">October 12, 2024 | Tuesday</p>
+                </div>
+                <div class="weather"></div>
+                <div class="features">
+                    <div class="top">
+                        <div class="option info">
+                            <img class="icon" src="/../icons/icons-info.png">
+                            <p>About the Campus</p>
+                        </div>
+                        <div class="option interactive-map">
+                            <img class="icon" src="/../icons/icons-location.png">
+                            <p>Interactive Map</p>
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <div class="option virtual-tour">
+                            <img class="icon" src="/../icons/icons-virtualtour.png" onclick="window.location.href='sidebar.html'">
+                            <p>Virtual Tour</p>
+                        </div>
+                        <div class="option user-manual" onclick="window.location.href='user-manual.html'">
+                            <img class="icon" src="/../icons/icons-manual.png">
+                            <p>User Manual</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.news-element');
+        const dots = document.querySelectorAll('.dot');
+
+        function showSlide(index) {
+            // Adjust index to wrap around
+            if (index >= slides.length) currentSlide = 0;
+            if (index < 0) currentSlide = slides.length - 1;
+
+            // Hide all slides and remove active class from dots
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active-dot'));
+
+            // Show the selected slide and mark the corresponding dot
+            slides[currentSlide].classList.add('active');
+            dots[currentSlide].classList.add('active-dot');
+        }
+
+        // Event listeners for dots
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentSlide = index;
+                showSlide(currentSlide);
+            });
+        });
+
+        // Event listeners for next and prev buttons
+        document.querySelector('.next-btn').addEventListener('click', () => {
+            currentSlide++;
+            showSlide(currentSlide);
+        });
+
+        document.querySelector('.prev-btn').addEventListener('click', () => {
+            currentSlide--;
+            showSlide(currentSlide);
+        });
+
+        // Initialize the first slide
+        showSlide(currentSlide);
+    </script>
+
+</body>
+
+</html>

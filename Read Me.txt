@@ -1,0 +1,12 @@
+Measurement Guidelines:
+
+*Do not use pixels instead:
+
+vh (viewport height) - for images, icons related and padding/border or top and bottom sides.
+vw (viewport height) - for containers and padding/border of left and right sides.
+rem (root EM) - for fonts or text elements.
+
+1. Pretty much backend and design only.
+2. Only user side will follow up admin side.
+3. Has few scripts but for operations that are easy enough (ex. time).
+4. Also still no database for this one for now.

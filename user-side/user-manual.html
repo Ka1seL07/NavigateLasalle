@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigate LaSalle | User Manual</title>
+    <link rel="stylesheet" href="/../style/usermanual.css">
+    <link rel="stylesheet" href="/../style/sidebar.css">
+    <!--FONT-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Grenze:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Gupter:wght@400;500;700&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <!-- Include Font Awesome in the head -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <img src="/../images/logo-dlsud2.png" class="logo">
+
+    <div class="bar">
+        <h2>User Guide</h2>
+        <p>Find answers instantly!</p>
+        <div class="search-bar">
+            <span class="search-text">What do you need help with?</span>
+            <i class="search-icon fas fa-search"></i>
+        </div>
+    </div>
+
+    <div class="widgets">
+        <div class="widget-box" id="manual">
+            <img class="icon" src="/../icons/icons-manual-alt.png">
+            <h2>Getting Started</h2>
+            <p>Easy setup, clear instruction. Reach out if needed.</p>
+        </div>
+        <div class="widget-box" id="faq" onclick="window.location.href='faq.html'">
+            <img class="icon" src="/../icons/icons-faq.png">
+            <h2>FAQ</h2>
+            <p>Help is a click away. FAQs and troubleshooting.</p>
+        </div>
+        <div class="widget-box" id="feedback">
+            <img class="icon" src="/../icons/icons-feedback.png">
+            <h2>Feedback</h2>
+            <p>Your insights matter. Share your thoughts, suggestion, and experience to help us improve.</p>
+        </div>
+    </div>
+
+    <script>
+        function toggleNav() {
+            const sideNav = document.getElementById("side-nav");
+            const collapseIcon = document.getElementById("collapse-icon");
+
+            sideNav.classList.toggle("collapsed");
+
+            // Toggle icon between chevron and plus
+            if (sideNav.classList.contains("collapsed")) {
+                collapseIcon.classList.remove("fa-chevron-left");
+                collapseIcon.classList.add("fa-bars");
+            } else {
+                collapseIcon.classList.remove("fa-bars");
+                collapseIcon.classList.add("fa-chevron-left");
+            }
+        }
+    </script>
+
+</body>
+</html>

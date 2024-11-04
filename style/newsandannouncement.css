@@ -1,0 +1,313 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(rgba(228, 228, 228, 0.95), rgba(228, 228, 228, 0.95)), url('../images/background-1.jpg') no-repeat center center/cover;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    color: #fff;
+}
+
+.side-nav {
+    height: 100vh;
+    width: 20vw;
+    background-color: #008a3d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.side-nav p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 0.8;
+}
+
+.text1 {
+    font-family: 'EB Garamond', sans-serif;
+    font-size: 7.5vh;
+    font-weight: 500;
+    margin-bottom: -1.5vh;
+}
+
+.text2 {
+    font-family: 'Caveat', cursive;
+    font-size: 10vh;
+    font-weight: bolder;
+}
+
+.text3 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9vh;
+    font-weight: 1000;
+    text-shadow: -0.3vw 0 #00401C;
+}
+
+.widget {
+    height: 10vh;
+    width: 15vw;
+    display: flex;
+    align-items: center;
+    padding: 2vh 2vw;
+    border-radius: 2vh;
+}
+
+.widget img {
+    height: 6vh;
+}
+
+.widget p {
+    margin-left: 1vw;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 500;
+    font-size: 1.75vh;
+    color: #fff;
+}
+
+.widget.selected {
+    background-color: #fff;
+}
+
+.widget.selected p {
+    color: #00401C;
+}
+
+#news-list {
+    margin-top: 15vh;
+}
+
+#academic-calendar {
+    margin-top: 2.5vh;
+}
+
+#go-back {
+    margin-top: 10vh;
+}
+
+#go-back p {
+    font-family: 'Caveat', cursive;
+}
+
+.logo {
+    width: 10vw;
+    padding-top: 5vh;
+}
+
+.content {
+    height: 100vh;
+    width: 80vw;
+}
+
+.news-list {
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.year-controller {
+    margin-top: 3vh;
+    width: 10vw;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.year-controller p {
+    font-family: 'Inria Sans', sans-serif;
+    font-size: 5vh;
+    font-weight: bold;
+    padding: 0 1vw;
+    color: black;
+}
+
+.year-controller button {
+    height: 5vh;
+    width: 5vw;
+    font-size: 2vh;
+    background-color: transparent;
+    border: none;
+    color: #FF7B00;
+}
+
+.year-controller button:disabled{
+    color: #a1a1a2;
+    cursor: not-allowed;
+}
+
+.month-controller {
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;
+    border: 2px solid #00C657;
+    border-radius: 5px;
+    max-width: 80%;
+}
+
+.month {
+    font-family: 'Inria Sans', sans-serif;
+    font-weight: bold;
+    padding: 1vh 1vw;
+    color: #a1a1a2;
+    cursor: pointer;
+    transition: color 0.3s;
+    font-size: 2vh;
+}
+
+.month.selected {
+    color: white;
+    background-color: #00C657;
+}
+
+.news-table{
+    margin-top: 2vh;
+    width: 90%;
+    height: 75%;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: auto;
+}
+
+.news-item{
+    width: 15vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1vh;
+    margin: 1vh 1.25vw 0;
+}
+
+.news-item img{
+    margin: 0%;
+    width: 15vw;
+    height: 15vh;
+    object-fit: cover;
+}
+
+.news-tag{
+    font-family: 'Roboto', serif;
+    font-weight: bold;
+    font-size: 1.75vh;
+    color: #008A3D;
+}
+
+.news-title{
+    font-family: 'Inria Sans', sans-serif;
+    font-size: 2vh;
+    color: #000;
+}
+
+.news-date{
+    font-family: 'Roboto', serif;
+    font-size: 1.5vh;
+    color: #00C657;
+}
+
+.news-desc{
+    font-family: 'Inria Sans', sans-serif;
+    font-size: 1.25vh;
+    color: #000;
+}
+
+.academic-calendar {
+    height: 95vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+}
+
+.academic-calendar h2{
+    color: black;
+    font-family: 'Inria Sans', sans-serif;
+    font-size: 6vh;
+    font-weight: bold;
+    white-space: nowrap;
+    margin: 7vh 0 3vh;
+}
+
+.sem-item {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border: 1px solid #a9a9ab;
+    border-radius: 2vh;
+    color: #008a3d;
+    align-items: center;
+    margin: 0 3vw 1vh;
+    width: 80%;
+}
+
+.sem-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    width: 100%;
+    padding: 0 5vh;
+}
+
+.sem-title i {
+    font-size: 5vh;
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+.uncollapse {
+    font-family: "Roboto", serif;
+    font-weight: 100;
+    font-size: 7vh;
+    display: none;
+    cursor: pointer;
+}
+
+.sem-text {
+    font-size: 2.5vh;
+    font-weight: bold;
+    font-family: 'EB Garamond', sans-serif;
+}
+
+.sem-schedule {
+    width: 100%;
+    border-top: 2px solid rgba(53, 53, 53, 0.75);
+    padding: 3vh 5vh 5vh;
+    font-size: 2vh;
+    text-align: justify;
+    display: none;
+}
+
+.sem-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.sem-table th, .sem-table td {
+    padding: 1.5vh 1vw;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.sem-table th {
+    background-color: #00401C;
+    color: #fff;
+    font-weight: bold;
+}
+
+.sem-table td {
+    color: #333;
+}
+
+::-webkit-scrollbar{
+    width: 0;
+}
